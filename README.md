@@ -3,9 +3,18 @@ svd-lda-image-rec
 
 A simple example of image recognition using singular value decomposition and linear discriminant analysis, based on examples from the excellent Computational Methods for Data Analysis course on Coursera taught by Nathan Kutz.
 
+The purpose of this branch is to provide a version that will succeed in
+Matlab (as opposed to Octave, under which the master branch will run). The
+big differences are in Matlab's edge function vs the Octave image package's
+edge function. Octave requires a higher threshold for the Sobel method, and
+likes the input to have uint8 applied to it before processing.
+
+A couple of the graphs aren't quite right in Matlab, please help if you're a
+Matlab user and submit a pull request.
+
 Usage
 -----
-Grab a copy of [GNU Octave](http://octave.sourceforge.net/) (or Matlab should work) and the [image package](http://octave.sourceforge.net/image/), run Octave in this directory, and run main.m by simply typing `main` in Octave.
+Run the file called main.m in Matlab.
 
 This will spit out a handful of graphs and images illustrating some interesting stuff. It will also print the success rate that indicates how well things went on the test data set (which should start out at 81.25%).
 

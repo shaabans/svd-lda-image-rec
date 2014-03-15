@@ -4,7 +4,7 @@ function [result, w, U, S, V, threshold] = dc_trainer(dog0, cat0, feature)
   nd = length(dog0(1,:));
   nc = length(cat0(1,:));
 
-  [U,S,V] = svd([dog0,cat0],0); % reduced SVD
+  [U,S,V] = svd([double(dog0),double(cat0)],0); % reduced SVD
 
   animals = S*V';
   U = U(:,1:feature);
@@ -60,7 +60,7 @@ function [result, w, U, S, V, threshold] = dc_trainer(dog0, cat0, feature)
   set(gca,'Xlim',[-10 10],'Ylim',[0 20],'Fontsize',[14])
   title('Dog Stats')
   subplot(1,2,2)
-  hist(sortcat,'r'); hold on, plot([threshold threshold],[0 20],'r')
+  %hist(sortcat,'r'); hold on, plot([threshold threshold],[0 20],'r')
   set(gca,'Xlim',[-10 10],'Ylim',[0 20],'Fontsize',[14])
   title('Cat Stats')
 

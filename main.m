@@ -1,5 +1,10 @@
 clear all; close all;
-pkg load image;
+
+%% If using octave uncomment the following.
+%% Be sure to install the image package first by typing the
+%% following within Octave:
+%% pkg install -forge image
+%pkg load image;
 
 load 'images/dog_data';
 load 'images/cat_data';
@@ -17,14 +22,14 @@ figure('name', '1st 9 Dogs');
 for j = 1:9
   subplot(3,3,j);
   dog1 = reshape(dog(:,j), 64, 64);
-  imshow(dog1);
+  imshow(uint8(dog1));
 end
 
 figure('name', '1st 9 Dog Edges');
 for j = 1:9
   subplot(3,3,j);
-  dog1 = double(reshape(dog(:,j), 64, 64));
-  imshow(edge(uint8(dog1), 'Sobel', 180));
+  dog1 = double(reshape(dogEdges(:,j), 64, 64));
+  imshow(uint8(dog1));
 end
 
 figure('name', '1st 4 "Eigenfaces"');

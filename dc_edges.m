@@ -5,6 +5,6 @@ function dcEdges = dc_edges(dcfile)
   nw = 64 * 64;
   for i = 1:n
     X = double(reshape(dcfile(:, i), 64, 64));
-    dcEdges(:, i) = reshape(edge(uint8(X), 'Sobel', 240), nw, 1);
+    dcEdges(:, i) = reshape(edge(X, 'Sobel', 25) .* 256, nw, 1);
   end
 end
