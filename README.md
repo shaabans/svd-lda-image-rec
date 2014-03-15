@@ -5,7 +5,7 @@ A simple example of image recognition using singular value decomposition and lin
 
 Usage
 -----
-Grab a copy of [GNU Octave](http://octave.sourceforge.net/) (or Matlab should work) and the [image package](http://octave.sourceforge.net/image/), run Octave in this directory, and run main.m by simply typing `main` in Octave.
+Grab a copy of [GNU Octave](http://octave.sourceforge.net/) (or switch to the Matlab branch if you're using Matlab rather than Octave) and the [image package](http://octave.sourceforge.net/image/), run Octave in this directory, and run main.m by simply typing `main` in Octave.
 
 This will spit out a handful of graphs and images illustrating some interesting stuff. It will also print the success rate that indicates how well things went on the test data set (which should start out at 81.25%).
 
